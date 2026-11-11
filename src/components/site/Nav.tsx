@@ -62,7 +62,7 @@ export function Nav() {
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[86vw] max-w-sm border-border bg-background p-0">
+            <SheetContent side="right" className="flex w-[86vw] max-w-sm flex-col gap-0 border-border bg-background p-0">
               <div className="flex h-16 items-center border-b border-border px-5">
                 <SheetTitle asChild>
                   <span>
