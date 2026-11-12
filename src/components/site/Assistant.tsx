@@ -246,8 +246,8 @@ export function Assistant() {
               send(input);
             }
           }}
-          placeholder="Ask in English, Français or الدارجة…"
-          className="max-h-28 min-h-10 flex-1 resize-none rounded-2xl border border-input bg-surface px-3.5 py-2.5 text-base text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-sm"
+          placeholder="Ask a question — EN, FR or الدارجة"
+          className="max-h-28 min-h-10 min-w-0 flex-1 resize-none placeholder:truncate rounded-2xl border border-input bg-surface px-3.5 py-2.5 text-base text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-sm"
         />
         <Button type="submit" size="icon" className="size-10 shrink-0" disabled={!input.trim() || typing} aria-label="Send message">
           <ArrowUp />
