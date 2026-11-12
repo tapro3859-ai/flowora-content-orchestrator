@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "FLOWORA — Content Publishing Automation" },
       { name: "description", content: "FLOWORA is a Moroccan automation studio building content publishing systems, AI customer agents and custom business workflows." },
       { name: "author", content: "FLOWORA" },
-      { name: "theme-color", content: "#141518" },
+      { name: "theme-color", content: "#121715" },
       { property: "og:site_name", content: "FLOWORA" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
