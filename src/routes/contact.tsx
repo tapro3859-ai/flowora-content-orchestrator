@@ -19,7 +19,7 @@ const SERVICES = [
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (search: Record<string, unknown>): { service?: string } =>
-    typeof search.service === "string" && SERVICES.some((s) => s.id === search.service) ? { service: search.service } : {},
+    typeof search["service"] === "string" && SERVICES.some((s) => s.id === search["service"]) ? { service: search["service"] } : {},
   head: () => ({
     meta: [
       { title: "Contact FLOWORA — Talk About Your Automation" },

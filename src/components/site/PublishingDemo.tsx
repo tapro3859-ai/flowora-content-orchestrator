@@ -39,7 +39,7 @@ type Phase = "idle" | "running" | "done";
 interface LogLine {
   at: number;
   msg: string;
-  tone?: "info" | "success";
+  tone?: "info" | "success" | undefined;
 }
 interface Sim {
   phase: Phase;
@@ -109,7 +109,7 @@ export function PublishingDemo({ showHeading = true }: { showHeading?: boolean }
   }, [sim.log.length]);
 
   const selectedIds = PLATFORMS.filter((p) => selected[p.id]).map((p) => p.id);
-  const content = CONTENT_SAMPLES[lang][variant % CONTENT_SAMPLES[lang].length];
+  const content = CONTENT_SAMPLES[lang][variant % CONTENT_SAMPLES[lang].length]!;
   const dir = CONTENT_LANGUAGES.find((l) => l.id === lang)?.dir ?? "ltr";
   const running = sim.phase === "running";
 

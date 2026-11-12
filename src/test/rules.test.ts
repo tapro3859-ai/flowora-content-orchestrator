@@ -16,7 +16,7 @@ describe("assistant", () => {
   it("offers a direct WhatsApp link when asked for a demo", () => {
     const r = getAssistantReply("How can I get a demo?");
     expect(r.intent).toBe("demo");
-    expect(r.links[0].href.startsWith("https://wa.me/212681569749")).toBe(true);
+    expect(r.links[0]?.href.startsWith("https://wa.me/212681569749")).toBe(true);
   });
 
   it("answers in the visitor's language", () => {

@@ -71,7 +71,7 @@ const slug = (s: string) =>
   s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 export function generateSampleProspects(query: ProspectQuery): Prospect[] {
-  const cat = CATEGORIES.find((c) => c.id === query.categoryId) ?? CATEGORIES[0];
+  const cat = CATEGORIES.find((c) => c.id === query.categoryId) ?? CATEGORIES[0]!;
   const city = query.location.trim() || "Casablanca";
   const rand = seeded(`${cat.id}|${city.toLowerCase()}`);
   const count = Math.max(1, Math.min(50, Math.floor(query.maxResults)));

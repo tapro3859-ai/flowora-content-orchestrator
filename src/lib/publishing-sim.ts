@@ -101,7 +101,7 @@ export function buildTimeline(selected: PlatformId[], speed = 1): SimEvent[] {
   }
   events.push(...platformEvents);
 
-  const last = events[events.length - 1].at;
+  const last = events.at(-1)?.at ?? 0;
   events.push({
     at: last + s(650),
     progress: 100,
