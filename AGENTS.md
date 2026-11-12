@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All demos (publishing workflow, prospecting, assistant) are front-end only with deterministic local data in `src/lib/*`; never call external publishing, maps or AI APIs from them. Why: the site must never imply real uploads, live data or account access.
+- Simulation and assistant logic lives in pure modules (`src/lib/publishing-sim.ts`, `assistant.ts`, `prospecting.ts`) covered by `src/test/rules.test.ts`; UI components only render state. Why: business rules stay testable.
+- Prospecting goes through the `ProspectProvider` interface so an authorized data provider can replace `sampleProvider` later without UI changes.
+- Each nav item is its own route that reuses section components from `src/components/site`; the home page composes all sections. Why: shareable pages with their own metadata.
+- Site is dark-only: tokens in `src/styles.css`, `<html class="dark">`; no theme toggle.

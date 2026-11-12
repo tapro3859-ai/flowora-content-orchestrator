@@ -8,10 +8,10 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="bg-atmosphere pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
-      <div className="container-page relative grid items-center gap-12 pb-20 pt-12 sm:pt-20 lg:grid-cols-[1fr_1.02fr] lg:gap-14 lg:pb-28 lg:pt-24">
+      <div className="container-page relative grid grid-cols-[minmax(0,1fr)] items-center gap-12 pb-20 pt-12 sm:pt-20 lg:grid-cols-[1fr_1.02fr] lg:gap-14 lg:pb-12 lg:pt-24">
         <div className="max-w-xl">
           <p className="eyebrow animate-fade-up">Intelligent Content Automation</p>
-          <h1 className="text-display text-heading-gradient mt-5 animate-fade-up text-[2.75rem] sm:text-6xl lg:text-[4.25rem]">
+          <h1 className="text-display text-heading-gradient mt-5 animate-fade-up text-[2.75rem] sm:text-6xl lg:text-[4rem]">
             Create Once. Publish Everywhere.
           </h1>
           <p className="mt-6 animate-fade-up text-base leading-relaxed text-muted-foreground sm:text-lg">

@@ -1,23 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/site/Hero";
+import { HowItWorks } from "@/components/site/HowItWorks";
+import { Monitoring } from "@/components/site/Monitoring";
+import { PublishingDemo } from "@/components/site/PublishingDemo";
+import { CtaBand } from "@/components/site/Section";
+import { Services } from "@/components/site/Services";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "FLOWORA — Create Once. Publish Everywhere." },
+      { name: "description", content: "Automated content publishing for Instagram, Facebook, TikTok and YouTube. Prepare, schedule and let the FLOWORA System handle the configured publishing workflow." },
+      { property: "og:title", content: "FLOWORA — Create Once. Publish Everywhere." },
+      { property: "og:description", content: "Automated content publishing for Instagram, Facebook, TikTok and YouTube. Prepare, schedule and let the FLOWORA System handle the configured publishing workflow." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <PublishingDemo />
+      <HowItWorks />
+      <Monitoring />
+      <Services />
+      <CtaBand />
+    </>
   );
 }

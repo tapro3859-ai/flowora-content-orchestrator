@@ -5,7 +5,7 @@ import { generateSampleProspects, toCsv } from "@/lib/prospecting";
 
 describe("assistant", () => {
   it("never quotes a price and invites contact", () => {
-    for (const q of ["How much does it cost?", "Quel est le prix ?", "شحال الثمن؟"]) {
+    for (const q of ["How much does it cost?", "Bonjour, quel est le prix ?", "salam, chhal taman?", "شحال الثمن؟"]) {
       const r = getAssistantReply(q);
       expect(r.intent).toBe("pricing");
       expect(r.text).not.toMatch(/\d+\s*(mad|dh|dhs|\$|€|eur|usd|درهم)/i);
@@ -16,7 +16,7 @@ describe("assistant", () => {
   it("offers a direct WhatsApp link when asked for a demo", () => {
     const r = getAssistantReply("How can I get a demo?");
     expect(r.intent).toBe("demo");
-    expect(r.links[0].href.startsWith("https://wa.me/212681569749")).toBe(true);
+    expect(r.links[0]?.href.startsWith("https://wa.me/212681569749")).toBe(true);
   });
 
   it("answers in the visitor's language", () => {

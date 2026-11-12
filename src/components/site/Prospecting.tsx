@@ -29,7 +29,7 @@ const LANGS: { id: ProspectLang; label: string }[] = [
 ];
 
 export function Prospecting() {
-  const [categoryId, setCategoryId] = useState(CATEGORIES[0].id);
+  const [categoryId, setCategoryId] = useState("restaurants");
   const [location, setLocation] = useState("Casablanca");
   const [lang, setLang] = useState<ProspectLang>("en");
   const [fields, setFields] = useState<ProspectField[]>(["name", "category", "city", "phone", "website", "rating", "source"]);
