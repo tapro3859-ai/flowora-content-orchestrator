@@ -5,7 +5,7 @@ import { generateSampleProspects, toCsv } from "@/lib/prospecting";
 
 describe("assistant", () => {
   it("never quotes a price and invites contact", () => {
-    for (const q of ["How much does it cost?", "Quel est le prix ?", "شحال الثمن؟"]) {
+    for (const q of ["How much does it cost?", "Bonjour, quel est le prix ?", "salam, chhal taman?", "شحال الثمن؟"]) {
       const r = getAssistantReply(q);
       expect(r.intent).toBe("pricing");
       expect(r.text).not.toMatch(/\d+\s*(mad|dh|dhs|\$|€|eur|usd|درهم)/i);

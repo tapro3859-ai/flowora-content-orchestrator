@@ -171,6 +171,9 @@ export function detectIntent(input: string): IntentId {
     let score = 0;
     for (const kw of intent.keywords) if (matches(text, kw)) score += kw.length;
     for (const kw of intent.generic ?? []) if (matches(text, kw)) score += kw.length / 2;
+    // Pricing and human-handoff questions always win; greetings/thanks only win alone.
+    if (score > 0 && (intent.id === "pricing" || intent.id === "human")) return intent.id;
+    if (intent.id === "greeting" || intent.id === "thanks") score *= 0.25;
     if (score > bestScore) {
       best = intent.id;
       bestScore = score;

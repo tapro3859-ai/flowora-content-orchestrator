@@ -122,12 +122,12 @@ export function Assistant() {
       onKeyDown={(e) => e.key === "Escape" && setOpen(false)}
       className="fixed inset-x-2 bottom-2 z-50 flex h-[min(38rem,calc(100dvh-1rem))] animate-fade-up flex-col overflow-hidden rounded-3xl border border-border-strong bg-popover shadow-elevated sm:inset-x-auto sm:bottom-6 sm:right-6 sm:w-[25rem]"
     >
-      <header className="flex items-center gap-3 border-b border-border px-4 py-3">
+      <header className="flex items-center gap-2.5 border-b border-border py-3 pl-4 pr-2.5">
         <LogoMark className="size-9" />
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold tracking-wide">FLOWORA Assistant</p>
-          <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            <span className="size-1.5 rounded-full bg-success" /> Online · Demo Assistant
+          <p className="truncate text-sm font-semibold tracking-[0.14em]">FLOWORA</p>
+          <p className="flex items-center gap-1.5 truncate text-xs text-muted-foreground">
+            <span className="size-1.5 shrink-0 rounded-full bg-success" /> Demo Assistant · Online
           </p>
         </div>
         <IconBtn label="Reset conversation" onClick={reset}>
