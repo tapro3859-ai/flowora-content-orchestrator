@@ -47,7 +47,7 @@ export function Services() {
           title="More systems, built the same way."
           description="Alongside content publishing, FLOWORA builds focused automation for customer conversations, prospecting, and daily operations."
         />
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2">
           <ServiceCard
             icon={<Bot className="size-5" />}
             title="AI Customer Agent"

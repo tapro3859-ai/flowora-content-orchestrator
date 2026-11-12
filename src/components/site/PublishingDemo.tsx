@@ -224,7 +224,7 @@ export function PublishingDemo({ showHeading = true }: { showHeading?: boolean }
           </div>
 
           {/* Workspace */}
-          <div className="grid gap-0 p-4 sm:p-6 lg:grid-cols-[minmax(0,0.9fr)_2.5rem_minmax(0,1.2fr)_2.5rem_minmax(0,1fr)] lg:items-stretch">
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-0 p-4 sm:p-6 lg:grid-cols-[minmax(0,0.9fr)_2.5rem_minmax(0,1.2fr)_2.5rem_minmax(0,1fr)] lg:items-stretch">
             {/* A. Source */}
             <div className={cn("inset-panel rounded-2xl p-4 transition-all duration-500", sim.source === "active" && "border-primary/60 shadow-glow")}>
               <CardLabel icon={<FolderOpen className="size-3.5" />} label="Source video" status={sim.source} />
@@ -378,7 +378,7 @@ export function PublishingDemo({ showHeading = true }: { showHeading?: boolean }
           </div>
 
           {/* Activity + completion */}
-          <div className="grid border-t border-border lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
+          <div className="grid grid-cols-[minmax(0,1fr)] border-t border-border lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
             <div className="p-4 sm:p-6">
               <p className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">Activity log</p>
               <ol ref={logRef} aria-live="polite" className="mt-3 h-44 space-y-1.5 overflow-y-auto rounded-xl border border-border bg-surface p-3 font-mono text-xs">

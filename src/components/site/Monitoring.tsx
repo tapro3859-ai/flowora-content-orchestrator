@@ -20,7 +20,7 @@ const BARS = [62, 70, 66, 80, 74, 88, 84, 90, 78, 92, 86, 94, 89, 96];
 export function Monitoring() {
   return (
     <section id="maintenance" className="border-t border-border py-20 sm:py-28">
-      <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+      <div className="container-page grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center">
         <div>
           <SectionHeading
             eyebrow="Continuous monitoring & maintenance"
