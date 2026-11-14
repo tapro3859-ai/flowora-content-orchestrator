@@ -1,0 +1,4 @@
+[build]
+  command = "bun run build"
+  # Nitro's Netlify preset emits public assets here and SSR functions separately.
+  publish = "dist"
